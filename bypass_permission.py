@@ -1,7 +1,10 @@
 import os
 
 def bypass(path):
-    """This method changes the rights of every file to 777
+    """This method changes the rights of a file to 777
+
+    Args:
+        path (string): The path of the file you want to change chmod
 
     :return:
     """
