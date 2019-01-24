@@ -1,0 +1,18 @@
+import unittest
+import bypass_permission
+
+
+class tests(unittest.TestCase):
+
+    def test(self):
+        """This method verifies if the permissions have been modified
+        :return:
+        """
+        path = "../../Documents/punpun.jpg"
+
+        self.assertEqual(bypass_permission.bypass(path), True)
+
+
+
+if __name__ == '__main__':
+    unittest.main()
