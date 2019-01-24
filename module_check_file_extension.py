@@ -19,7 +19,7 @@ def check_extension_file(file):
     for extension in wh_extension:
         if extension == pathlib.PurePosixPath(file).suffix:
             print("Fichier Valide")
-            return file
+            return True
     return False
 
 
