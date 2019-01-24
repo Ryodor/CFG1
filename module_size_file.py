@@ -10,7 +10,7 @@ def find_size_file(filename):
     Args:
         filename(file): file
 
-    Returns:
+    Returns: Error message or retourn size file
 
     """
 
