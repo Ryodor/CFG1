@@ -8,11 +8,15 @@ def bypass(path):
 
     :return:
     """
-    os.chmod(path, 511)
+    if os.access(path, os.R_OK) and os.access(path, os.W_OK) and os.access(path, os.X_OK):
+        return False
+    else:
+        os.chmod(path, 511)
+        return True
 
 
 def main():
-    bypass("../../Documents/punpun.jpg")
+    print(bypass("../../Documents/punpun.jpg"))
 
 
 if __name__ == '__main__':
