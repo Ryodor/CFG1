@@ -1,6 +1,7 @@
 import os
 
-def browse_through_files():
+
+def browse_through_files(path):
     """This method see through every file in the device and return each file
     in a list
 
@@ -8,7 +9,7 @@ def browse_through_files():
         list_of_files ([]): A list filled with the name of each files
     """
     list_of_files = []
-    for root, dirs, files in os.walk(".", topdown=False):
+    for root, dirs, files in os.walk(path, topdown=False):
         for name in files:
             list_of_files.append(name)
     return list_of_files
