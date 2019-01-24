@@ -1,10 +1,18 @@
 import unittest
 import bypass_permission
+import browsefiles
+import re
 
 
 class tests(unittest.TestCase):
 
-    def test(self):
+    def test_browse_through_files(self):
+        path = "../../Document"
+        list = browsefiles.browse_through_files(path)
+
+        self.assertRegex(list, "^.$")
+
+    def test_bypass(self):
         """This method verifies if the permissions have been modified
         :return:
         """
