@@ -1,7 +1,9 @@
 import os
 
 def browse_through_files():
-    """
+    """This method see through every file in the device and return each file
+    in a list
+
     :return:
         list_of_files ([]): A list filled with the name of each files
     """
