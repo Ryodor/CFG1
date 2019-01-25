@@ -6,7 +6,7 @@ def bypass(path):
     Args:
         path (string): The path of the file you want to change chmod
 
-    :return:
+    Return:
     """
     if os.access(path, os.R_OK) and os.access(path, os.W_OK) and os.access(path, os.X_OK):
         return False
